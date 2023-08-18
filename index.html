@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Master</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./scripts/tailwind.config.js"></script>
+</head>
+
+<body class="p-8">
+  <header>
+    <h1 class="text-4xl text-center my-8 text-emerald-500 font-semibold">Money master</h1>
+  </header>
+  <main class="flex gap-6 justify-between flex-col md:flex-row">
+    <img src="./money-master.png" class="w-4/5 md:w-1/2  mx-auto" alt="money">
+
+    <div class="text-center bg-slate-50 py-4 px-4 flex flex-col gap-3 w-4/5 md:w-1/2 lg:w-[40%]  mx-auto">
+      <h5 class="text-md font-medium">Income</h5>
+      <div class="flex justify-center gap-4">
+        <p>Income:</p>
+        <input type="text" id="income-input" class="bg-slate-200 rounded px-2">
+      </div>
+      <h5 class="text-md font-medium">Expenses</h5>
+      <div class="flex justify-center gap-4">
+        <p>Food<span class="invisible">iin</span>:</p>
+        <input type="text" id="foods" class="bg-slate-200 rounded px-2">
+      </div>
+      <div class="flex justify-center gap-4">
+        <p>Rent<span class="invisible">iiin</span>:</p>
+        <input type="text" id="rent" class="bg-slate-200 rounded px-2">
+      </div>
+      <div class="flex justify-center gap-4">
+        <p>Clothes:</p>
+        <input type="text" id="clothes" class="bg-slate-200 rounded px-2">
+      </div>
+      <button onclick="setTotalExpenseBalance()" class="bg-blue-500 hover:bg-blue-400 text-white p-1 rounded w-36 mx-auto">Calculate</button>
+      <p class="total-expense text-md font-medium">Total Expense : <span id="total-expense">00</span></p>
+      <p class="balance text-md font-medium">Balance : <span id="balance">00</span></p>
+      <div class="flex justify-center gap-2">
+        <span>Save : </span> <input type="text" value="20" class="text-center w-24 bg-slate-200 rounded px-2"> <span>%</span> <button onclick="getSavings()" class="bg-blue-500 hover:bg-blue-400 text-white py-1 px-4 rounded">Save</button> 
+      </div>
+      <p class="total-saving text-md font-medium" >Saving Amount : <span id="savings-amount">00</span></p>
+      <p class="remaining-balance text-md font-medium">Remaining Balance : <span id="remaining-balance">00</span></p>
+
+    </div>
+  </main>
+
+
+  <script src="./scripts/momey.js"></script>
+</body>
+
+</html>
